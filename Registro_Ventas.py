@@ -65,6 +65,11 @@ while True:
                     input('¿Desea añadir más articulos? \n1)Si \n2)No: '))
 
             break
+            Total=(precio*cantidad)
+            _Iva = Total * 0.16
+            ptotal = _Iva + Total
+            print(f"Total : ${Total}")
+            print(f"Total + IVA : ${ptotal}")
 
     elif respuesta == 2:
         busqueda = int(input("Ingresa la folio a buscar: "))
@@ -80,7 +85,6 @@ while True:
         print(f"Total + IVA : ${totaliva}")
 
     if respuesta == 3:
-        print(DiccionarioVentas)
         while True:
             try:
                 FechaCap = input('Digite la fecha inicio (DD-MM-AAAA)): ')
